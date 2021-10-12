@@ -1,5 +1,5 @@
-const urlAll ='https://restcountries.eu/rest/v2/all';
-const regionURL= 'https://restcountries.eu/rest/v2/region/'
+const urlAll ='https://restcountries.com/v3.1/all';
+const regionURL= 'https://restcountries.com/v3.1/region/'
 const countriesContainer = document.querySelector('.grid-container')
 const theme_toggler = document.querySelector('.theme-toggler')
 const specificCountryContainer=document.getElementById('specific-country')
@@ -47,7 +47,7 @@ async function showSpecificCountry(country){
 
     
     //Fetching the country based on its name
-    const res = await fetch(`https://restcountries.eu/rest/v2/name/${country}`)
+    const res = await fetch(`https://restcountries.com/v3.1/name/${country}`)
     const countryInfo= await res.json();
     //Fetching the country based on its name
    
@@ -139,7 +139,7 @@ function addBorders(borders){
 //* Searching for countries//
 async function searchForCountry(country){
     if(country){
-        const res = await fetch(`https://restcountries.eu/rest/v2/name/${country}`)
+        const res = await fetch(`https://restcountries.com/v3.1/name/${country}`)
         const data = await res.json();
         showTheCountries(data);
            //to show specific country based on click
